@@ -1,0 +1,362 @@
+﻿
+
+
+
+
+
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - 基本表单</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/chosen.css" rel="stylesheet">
+    <link href="css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/cropper.min.css" rel="stylesheet">
+    <link href="css/switchery.css" rel="stylesheet">
+    <link href="css/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.nouislider.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/clockpicker.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/laydate.css">
+    <link type="text/css" rel="stylesheet" href="css/laydate1.css">
+    
+    <link href="css/sweetalert.css" rel="stylesheet">
+
+    
+     <link rel="stylesheet" href="themes/default/default.css" />
+		<script charset="utf-8" src="kindeditor-min.js"></script>
+		<script charset="utf-8" src="lang/zh_CN.js"></script>
+		<script>
+			KindEditor.ready(function(K) {
+				K.create('#content1', {
+					pasteType : 0
+				});
+				K.create('#content2', {
+					pasteType : 1
+				});
+				K.create('#content3', {
+					pasteType : 2
+				});
+			});
+		</script>
+        <script>
+			KindEditor.ready(function(K) {
+				var editor = K.editor({
+					allowFileManager : true
+				});
+				K('#image1').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url1').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url1').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+				K('#image2').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url2').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url2').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+				K('#image3').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url3').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url3').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+				K('#image4').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url4').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url4').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+				K('#image5').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url5').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url5').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+				
+				
+			});
+		</script>
+    
+</head>
+<body class="gray-bg">
+	<div style="display: none;">
+		<textarea name="hh"></textarea>
+	</div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>商品修改</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="form-horizontal"  action="admin_product_save.action"  method="post">
+                        	 <div class="form-group">
+                        		<input type="hidden" name="product.id" id="productid" value="116">
+                        		<label class="col-sm-3 control-label"></label>
+                        		<div class="col-sm-8" style="color: red;font-size: 15px">
+                                    
+                                </div>
+                        	</div>
+                            
+                        	  <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>商品名称：</label>
+                                <div class="col-sm-8">
+                                    <input id="spmc"  name="product.spmc" value="iPhone 8" type="text" placeholder=" 请输入商品名称" class="form-control">
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>商品货号：</label>
+                                <div class="col-sm-8">
+                                    <input id="spmc"  name="product.spms" value="123456789" type="text" placeholder=" 请输入商品货号" class="form-control">
+                                    <span class="help-block m-b-none">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
+                                </div>
+                            </div>
+                            
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>商品售价：</label>
+                                <div class="col-sm-8">
+                                    <input id="spsj"  name="product.spsj" value="6888.0" type="text" placeholder=" 请输入商品售价"  onkeyup="value=value.replace(/[^\d.]/g,'')"  onblur="value=value.replace(/[^\d.]/g,'') "  class="form-control">
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>商品供货价：</label>
+                                <div class="col-sm-8">
+                                    <input id="spsj"  name="product.spsj" value="6888.0" type="text" placeholder=" 请输入商品供货价"  onkeyup="value=value.replace(/[^\d.]/g,'')"  onblur="value=value.replace(/[^\d.]/g,'') "  class="form-control">
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>库存：</label>
+                                <div class="col-sm-8">
+                                    <input id="kc"  name="product.kc" value="99" type="text" placeholder=" 请输入商品库存" class="form-control" onkeyup="value=value.replace(/[^\d]/g,'')"  onblur="value=value.replace(/[^\d]/g,'') " >
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                        	 <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>类别：</label>
+                                <div class="col-sm-8">
+                                    <select id="product" name="product.fid" style="width: 100%;" class="form-control">
+                                    <option selected="" value="114">红酒</option>
+                                    <option selected="" value="113">鹿茸</option>
+                                    <option selected="" value="112">书房四宝</option>
+                                    <option selected="" value="111">发卡</option>
+                                    <option selected="" value="110">戒指</option>
+                                    <option selected="" value="109">啤酒</option>
+                                    <option selected="" value="108">白酒</option>
+                                    <option selected="" value="107">桌子</option>
+                                    <option selected="" value="106">窗帘</option>
+                                    <option selected="" value="105">电脑</option>
+                                    <option selected="" value="104">手机</option>
+                                    <option selected="" value="103">包</option>
+                                    <option selected="" value="102">羽绒服</option>
+                                    <option selected="" value="101">裤子</option>
+                                    <option selected="" value="100">鞋子</option>
+                                    <option selected="" value="99">口腔用品</option>
+                                    <option selected="" value="98">化妆品</option>
+                                    <option selected="" value="97">厨房电器</option>
+                                    <option selected="" value="96">文玩</option>
+                                    <option selected="" value="95">家用电器</option>
+                                    <option selected="" value="94">家纺</option>
+                                    <option selected="" value="93">配饰</option>
+                                    <option selected="" value="92">矿泉水</option>
+                                    <option selected="" value="91">滋补品</option>
+                                    
+									</select>
+									<input type="hidden" id="hidden" name="product.fmc" >
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>选择规格：</label>
+                                <div class="col-sm-8">
+                                    <select id="product" name="product.fid" style="width: 100%;" class="form-control">
+                                    <option selected="" value="114">规格1</option>
+                                    <option selected="" value="113">规格2</option>
+                                    <option selected="" value="112">规格3</option>
+									</select>
+									<input type="hidden" id="hidden" name="product.fmc" >
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>选择专区：</label>
+                                <div class="col-sm-8">
+                                    <select id="product" name="product.fid" style="width: 100%;" class="form-control">
+                                    <option selected="" value="114">产品专区</option>
+                                    <option selected="" value="113">优惠券专区</option>
+                                    <option selected="" value="112">购物券专区</option>
+                                    <option selected="" value="114">重消区</option>
+                                    <option selected="" value="113">秒杀区</option>
+                                    <option selected="" value="112">团购区</option>
+									</select>
+									<input type="hidden" id="hidden" name="product.fmc" >
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>选择券：</label>
+                                <div class="col-sm-8">
+                                    <select id="product" name="product.fid" style="width: 100%;" class="form-control">
+                                    
+                                    <option selected="" value="113">优惠券</option>
+                                    <option selected="" value="112">购物券</option>
+                                    <option selected="" value="114">重消券</option>
+                                    <option selected="" value="113">代金券</option>
+                                    
+									</select>
+									<input type="hidden" id="hidden" name="product.fmc" >
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>代金券比例：</label>
+                                <div class="col-sm-8">
+                                    <input id="kc" name="product.kc" value="%" type="text" placeholder=" " class="form-control" onkeyup="value=value.replace(/[^\d]/g,'')" onblur="value=value.replace(/[^\d]/g,'') ">
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>主图1：</label>
+                                <div class="col-sm-8">
+                                 <input type="text" id="url1" value="" /> <input type="button" id="image1" value="选择图片" />
+								 
+								 &nbsp;&nbsp;&nbsp;
+								 <img id="img_image" src="/attached/image/20171126/20171126160703_843.jpg" alt="" height="95" width="120" style="vertical-align:middle;"/>
+									<span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>主图2：</label>
+                                <div class="col-sm-8">
+                                 <input type="text" id="url2" value="" /> <input type="button" id="image2" value="选择图片" />
+						&nbsp;&nbsp;&nbsp;
+						<img id="img_image2" src="/attached/image/20171126/20171126160706_554.jpg" alt="" height="95" width="120" style="vertical-align:middle;"/>
+									<span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>主图3：</label>
+                                <div class="col-sm-8">
+                                 <input type="text" id="url3" value="" /> <input type="button" id="image3" value="选择图片" />
+						&nbsp;&nbsp;&nbsp;
+						<img id="img_image3" src="/attached/image/20171126/20171126160710_945.jpg" alt="" height="95" width="120" style="vertical-align:middle;"/>
+									<span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>主图4：</label>
+                                <div class="col-sm-8">
+                                 <input type="text" id="url4" value="" /> <input type="button" id="image4" value="选择图片" />
+						&nbsp;&nbsp;&nbsp;
+						<img id="img_image3" src="/attached/image/20171126/20171126160710_945.jpg" alt="" height="95" width="120" style="vertical-align:middle;"/>
+									<span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>主图5：</label>
+                                <div class="col-sm-8">
+                                 <input type="text" id="url5" value="" /> <input type="button" id="image5" value="选择图片" />
+						&nbsp;&nbsp;&nbsp;
+						<img id="img_image3" src="/attached/image/20171126/20171126160710_945.jpg" alt="" height="95" width="120" style="vertical-align:middle;"/>
+									<span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>销量：</label>
+                                <div class="col-sm-8">
+                                    <input id="djcs"  name="product.xl" value="" type="text" placeholder="请输入销量" class="form-control" onkeyup="value=value.replace(/[^\d]/g,'')"  onblur="value=value.replace(/[^\d]/g,'') ">
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                             
+                           
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>秒杀期限：</label>
+                                <div class="col-sm-8">
+                                    <input id="kc"  name="product.kc" value=" " type="text" placeholder=" 请输入秒杀期限" class="form-control" onkeyup="value=value.replace(/[^\d]/g,'')"  onblur="value=value.replace(/[^\d]/g,'') " >
+                                    <span class="help-block m-b-none"></span>
+                                </div>
+                            </div>
+                             
+                             
+                    		  <div class="form-group">
+                                <label class="col-sm-3 control-label"><span style="color:red;">*</span>商品描述：</label>
+                                <div class="col-sm-8">
+                                   <textarea id="content3" name="content" style="width:700px;height:200px;visibility:hidden;"></textarea>
+                                    <span class="help-block m-b-none"></span>
+                                </div> 
+                            </div>	
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">商品设置：</label>
+                               <div class="checkbox checkbox-success checkbox-inline">
+                               			
+                                        <input id="inlineCheckbox1" value="1" type="checkbox" name="product.tj">
+                                        <label for="inlineCheckbox1">推荐</label>
+                               </div>
+                                <div class="checkbox checkbox-success checkbox-inline">
+                                        <input id="inlineCheckbox2" value="1" type="checkbox" name="product.rm">
+                                        <label for="inlineCheckbox2">热卖</label>
+                               </div>
+                                <div class="checkbox checkbox-success checkbox-inline">
+                                        <input id="inlineCheckbox3" value="1" type="checkbox" name="product.jf">
+                                        <label for="inlineCheckbox3">首页显示</label>
+                               </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-8">
+                                    <button id="submit" class="btn btn-sm btn-info" type="submit">确认保存</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {font-size:12px; font-family:"宋体"; color:#000; background:url(../img/bg.jpg) center top repeat-x; } 
+* {margin:0; padding:0; list-style:none; border:none; text-decoration:none;}
+#wrap {width:100%;}
+
+/*header*/
+#header {margin:0 auto; width:1100px; height:470px; position:relative;}
+h1 {float:left; padding:4px 0 0 10px; width:363px; height:152px; }
+#header #menu { position:absolute; top:0; right:0; width:621px; height:170px; z-index:4; }
+#header #menu li {float:left; margin-right:18px; padding:7px 0 0 12px; width:39px; height:163px; background:url(../img/a4.jpg) top no-repeat;}
+#header #banner {width:1003px; height:309px; position:absolute; top:145px; left:50%; margin-left:-501px; z-index:2; }
+/*contents*/
+#contents {margin:0 auto; width:1003px; overflow:hidden; clear:both;}
+#contents .top {float:left; width:1003px; height:37px; background:url(../img/top.gif) left top no-repeat;}
+#contents .top .tit {float:left; padding:7px 0 0 55px; width:337px; height:30px;}
+#contents .top .img {float:left; padding-top:5px; width:46px; height:32px;}
+#contents .top .text {float:left; padding-top:10px; width:207px; height:27px;}
+#contents .left {float:left; width:324px; height:774px;}
+#contents .left .box1 {padding:20px 0 0 17px; margin-top:27px; width:288px; height:204px; background:url(../img/left_box1_bg.jpg) no-repeat; border:#e1e0de 1px solid;}
+#contents .left .box1 .main {width:271px; height:161px;}
+#contents .left .box1 .main li { width:237px; height:45px; background:url(../img/left_bg.jpg) bottom left repeat-x; line-height:45px;}
+#contents .left .box1 .main li a {background:url(../img/left_icon.jpg) 0 15px no-repeat; display:block; color:#000; padding-left:22px;} 
+#contents .left .box2 {margin-top:90px; padding:20px 0 0 17px; width:288px; height:288px; border:#e1e0de 1px solid; background:url(../img/left_box2_bg.jpg) right bottom no-repeat;}
+#contents .left .box2 .img {float:left; margin:5px 0 0 9px; width:129px; height:115px;}
+#contents .left .box2 .text1 {float:left; margin-top:12px; width:108px; height:47px; background:url(../img/left_icon.jpg) 0 2px no-repeat; display:block; text-indent:17px;}
+#contents .left .box2 .text2 {float:left; padding-top:4px; width:120px; height:55px; border-top:#e1e0de 1px solid; text-align:bottom;}
+#contents .left .box2 .main {float:left; width:254px; height:115px;}
+#contents .left .box2 .main li {width:242px; height:28px; background:url(../img/left_bg2.jpg) bottom left repeat-x; line-height:28px;}
+#contents .left .box2 .main li a {background:url(../img/left_icon.jpg) 0 9px no-repeat; padding-left:12px; display:block; color:#000;}
+#contents .right {float:left; width:679px; height:774px;}
+#contents .right .box1 {width:679px; height:321px; }
+#contents .right .box1 .tit {padding:26px 0 0 63px; width:595px; height:40px; background:url(../img/right_bg.jpg) 0  17px no-repeat; line-height:40px;}
+#contents .right .box1 .main {width:670px; height:241px; margin-top:13px;}
+#contents .right .box1 .main .img {float:left; width:172px; height:214px; padding:27px 0 0 5px;}
+#contents .right .box1 .main .list1 {float:left; width:233px; height:241px; margin-right:26px; background:url(../img/right_bg1.jpg) no-repeat;}
+#contents .right .box1 .main .list1 dl {width:233px; height:203px;}
+#contents .right .box1 .main .list1 dl dt {padding:21px 0 0 25px; width:183px; height:27px; color:#787c6d; font-weight:bold;}
+#contents .right .box1 .main .list1 dl .dd1 {float:left; width:92px; height:35px; background:url(../img/bg1.jpg) bottom repeat-x; margin-left:25px!important; margin-left:12px; line-height:35px;}
+#contents .right .box1 .main .list1 dl .dd2 {float:left; width:65px; height:35px; padding-left:22px; background:url(../img/bg1.jpg) bottom repeat-x;  line-height:35px;}
+#contents .right .box1 .main .list1 dl a {padding-left:22px; background:url(../img/icon1.jpg) 6px 8px no-repeat; color:#787c6d;}
+#contents .right .box1 .main .list2 {float:left; width:233px; height:241px; background:url(../img/right_bg1.jpg) no-repeat;}
+#contents .right .box1 .main .list2 dl {width:233px; height:203px;}
+#contents .right .box1 .main .list2 dl dt {padding:21px 0 0 25px; width:183px; height:27px; color:#787c6d; font-weight:bold;}
+#contents .right .box1 .main .list2 dl dd {float:left; width:153px; height:35px; background:url(../img/bg1.jpg) bottom repeat-x; margin-left:25px!important; margin-left:12px; line-height:35px;}
+#contents .right .box1 .main .list2 dl a {padding-left:22px; background:url(../img/icon1.jpg) 6px 8px no-repeat; color:#787c6d;}
+#contents .right .box1 .main .more {width:72px; height:23px; margin:0 0 0 136px; line-height:23px; text-align:center; background:url(../img/more.jpg) no-repeat;}
+#contents .right .box1 .main .more a {color:#e0dfd6;}
+#contents .right .box2 {width:679px; height:258px; }
+#contents .right .box2 .tit {padding:26px 0 0 63px; width:595px; height:40px; background:url(../img/right_bg2.jpg) 0  17px no-repeat; line-height:40px; color:#000; font-size:12px;}
+#contents .right .box2 .main {float:left; width:198px; height:171px; margin-right:35px; margin-top:14px; background:url(../img/right_bg3.jpg) top no-repeat;} 
+#contents .right .box2 .main dt {width:188px; height:136px; padding:5px 0 0 6px;}
+#contents .right .box2 .main dd {width:198px; height:44px; line-height:44px; text-align:center;}
+#contents .right .box3 {width:674px; height:93px;}
+#contents .left1 {float:left; margin-top:49px; width:221px; height:762px; background:url(../img/left1_bg.jpg) no-repeat;}
+#contents .left1 dl {width:221px; height:327px; padding-top:52px;}
+#contents .left1 dl dt {width:101px; height:70px; padding:2px 0 0 84px; background:url(../img/left1_nav2.gif) 38px 0 no-repeat;}
+#contents .left1 dl dd {margin-bottom:48px; width:119px; height:20px; padding-left:82px; background:url(../img/left1_nav.jpg) 31px 0  no-repeat; font-size:18px;}
+#contents .center1 {float:left; width:449px; height:689px; margin-top:49px;}
+#contents .center1 .tit {width:190px; height:46px; margin-top:22px; padding-right:29px; text-align:right; background:url(../img/center1_bg.jpg) top right no-repeat;}
+#contents .center1 .img {width:449px; height:570px;}
+#contents .right1 {float:left; margin-top:140px; width:332px; height:502px;}
+#contents .right1 li {float:left; width:22px; margin-right:9px; font-size:18px; word-wrap:break-word; word-break:nomal;}
+#contents .right2 {float:left; margin-top:49px; width:782px; height:667px;}
+#contents .right2  .tit {width:190px; height:35px; margin-top:22px; padding-right:29px; text-align:right; background:url(../img/center1_bg.jpg) top right no-repeat;}
+#contents .right2 .list {width:727px; height:465px; display:block; margin-left:46px;}
+#contents .right2 .list li {text-align:right; display:block; padding-right:113px; width:614px; height:58px; line-height:58px; background:url(../img/right2_bg.jpg) right bottom no-repeat;}
+#contents .right2 .list li a {float:left; padding-left:47px; display:block; background:url(../img/right2_nav.jpg) left center no-repeat; color:#000;}
+#contents .right2 .bottom {width:304px; height:32px; margin:49px 0 0 469px;}
+#contents .right2 .bottom a {color:#000;}
+#contents .right2_a {float:left; width:764px; height:695px; margin-top:49px;}
+#contents .right2_a .tit {width:578px; height:67px; padding:13px 0 0 186px; background:url(../img/right2_a_bg.jpg) center 42px no-repeat; font-weight:bold;}
+#contents .right2_a .text {width:732px; margin-left:32px; margin-bottom:32px; line-height:21px; text-indent:24px;}
+#contents .right2_a .img1 {width:642px; height:466px; margin-left:37px;}
+#contents .right3 {float:left; width:782px; height:737px; margin-top:45px;}
+#contents .right3 .tit {width:405px; height:50px; padding:7px 0 0 87px; background:url(../img/right3_bg.jpg) 74px 1px no-repeat;}
+#contents .right3 .main {width:717px; margin:33px 0 0 56px;}
+#contents .right3 .main dt {width:706px; height:29px; padding:0 0 16px 11px; background:url(../img/right3_nav1.jpg) left bottom no-repeat;}
+#contents .right3 .main dd {width:687px; padding:31px 0 0 30px; background:url(../img/icon4.jpg) 23px 19px no-repeat; text-indent:28px; line-height:25px;}
+#contents .right3_1 {float:left; width:782px; height:737px; margin-top:45px;}
+#contents .right3_1 .tit {width:405px; height:72px; padding:10px 0 0 87px; background:url(../img/right3_bg.jpg) 74px 1px no-repeat;}
+#contents .right3_1 .box1 {width:720px; height:323px; margin-left:54px;}
+#contents .right3_1 .box1 dt {float:left; width:264px; height:300px; padding-top:10px;}
+#contents .right3_1 .box1 dd {float:left; width:456px; line-height:21px;}
+#contents .right3_1 .right3_2 {width:734px; height:483px; margin:40px 0 0 40px; clear:both;}
+#contents .right3_1 .right3_2 dl {float:left; width:202px; height:212px; margin-right:56px;}
+#contents .right3_1 .right3_2 dl dt {width:202px; height:169px;}
+#contents .right3_1 .right3_2 dl dd {width:202px; height:43px; text-align:center; font-size:14px;}
+#contents .main_2_a {width:887px; height:774px; margin:0 auto;}
+#contents .main_2_a .tit {width:815px; height:72px; margin-left:72px;}
+#contents .main_2_a .tit .text1 {float:left; width:129px; height:56px; padding:16px 0 0 354px; background:url(../img/main_2_a_tit.jpg) right 30px no-repeat; font-size:14px;}
+#contents .main_2_a .tit .text2 {float:left; width:332px; height:58px; padding-top:14px; background:url(../img/main_2_a_tit1.jpg) 74px 0 no-repeat; font-size:24px; font-weight:bold;}
+#contents .main_2_a .img {width:887px; height:246px;}
+#contents .main_2_a .text {width:887px; line-height:22px; text-indent:24px;}
+#contents .main_2_a .text3 {width:887px; line-height:72px; font-weight:bold; text-align:center;}
+#contents .right4 {float:left; width:777px; height:742px; margin-top:49px;}
+#contents .right4 .box1 {float:left; width:575px; height:371px; }
+#contents .right4 .box1 .tit {width:311px; height:92px; padding-left:95px; background:url(../img/right4_nav.jpg) left top no-repeat;}
+#contents .right4 .box1 .tit1 {width:404px; height:71px; padding:13px 0 0 40px; background:url(../img/right4_nav2.jpg) 22px 0 no-repeat;}
+#contents .right4 .box1 .img {width:497px; height:196px; margin-left:78px;}
+#contents .right4 .img_rt {float:left; width:202px; height:222px; background:url(../img/right4_nav4.jpg) left bottom no-repeat;}
+#contents .right4 .img_rt .text1 {width:174px; height:22px; margin-left:28px; margin-top:42px;}
+#contents .right4 .img_rt .text2 {width:82px; height:36px; margin:49px 0 0 80px;}
+#contents .right4 .img_rt .text3 {width:153px; height:34px; margin-left:8px;}
+#contents .right4 .text {float:left; width:679px; height:329px; margin-left:45px;}
+#contents .right4 .text .p1 {width:679px; line-height:22px; margin-bottom:19px; text-indent:34px; letter-spacing:3px;}
+#contents .right4 .text .p2 {width:409px; margin-bottom:9px; height:12px; letter-spacing:3px;}
+#contents .right5 {float:left; margin-top:49px; width:782px; height:667px;}
+#contents .right5  .tit {width:190px; height:91px; margin-top:22px; padding-right:29px; text-align:right; background:url(../img/center1_bg.jpg) top right no-repeat;}
+#contents .right5 dl {float:left; margin-left:42px!important; margin-left:21px; width:218px; height:222px; background:url(../img/right5_nav1.jpg) top no-repeat; }  
+#contents .right5 dl dt {width:207px; height:155px; padding:8px 0 0 5px;}
+#contents .right5 dl dd {width:218px; height:59px; line-height:59px; text-align:center;}
+#contents .right5 .bottom {margin-top:75px; width:782px; height:70px; text-align:center; line-height:70px;}
+#contents .right5 .bottom  a {color:#000;}
+#contents .right5_a {float:left; margin-top:49px; width:782px; height:667px;}
+#contents .right5_a  .tit {width:190px; height:91px; margin-top:22px; padding-right:29px; text-align:right; background:url(../img/center1_bg.jpg) top right no-repeat;}
+#contents .right5_a .main {width:769px; height:550px; margin-left:13px;}
+#contents .right5_a .main p {line-height:20px; text-indent:22px; font-size:14px;}
+#contents .right6 {float:left; width:779px; height:758px; margin-top:31px;}
+#contents .right6 .box1 {width:779px; height:582px;}
+#contents .right6 .box1 .tit {width:121px; height:56px; padding-left:43px; background:url(../img/right6_nav.jpg) 29px 12px no-repeat;}
+#contents .right6 .box1 .text { margin-left:33px; width:745px; height:167px;}
+#contents .right6 .box1 .text p {line-height:21px; text-indent:35px; letter-spacing:2px;}
+#contents .right6 .box1 .img {width:743px; height:359px; margin-left:35px;}
+#contents .right6 .box2 {width:779px; height:169px;}
+#contents .right6 .box2 .tit {width:192px; height:75px; padding-left:43px; background:url(../img/right6_nav.jpg) 29px 12px no-repeat; }
+#contents .right6 .box2 .text {width:603px; height:84px; margin-left:65px;}
+#contents .right6 .box2 .text li {float:left; margin-right:162px; width:217px; height:21px;}
+#contents .right7 {float:left; width:612px; height:762px; margin-top:49px;}
+#contents .right7 .tit {width:275px; height:66px; padding:2px 0 0 111px; background:url(../img/right7_tit.jpg) 28px 2px no-repeat;}
+#contents .right7 dl{width:573px; height:29px; margin:0 0 20px 118px;}
+#contents .right7 dl dt {float:left; width:92px;  line-height:25px; font-size:14px}
+#contents .right7 dl dd {float:left; width:400px; line-height:25px;}
+#contents .right7 ul {width:419px; height:31px; margin:22px 0 0 187px;}
+#contents .right7 ul li {float:left; width:71px; height:31px; margin-right:75px;}
+#contents .left8 {float:left; margin-top:49px; width:221px; height:755px; background:url(../img/bg8.jpg) no-repeat;}
+#contents .left8 .tit {width:89px; height:111px; padding:96px 0 0 28px; background:url(../img/left8_bg.jpg) 25px 25px no-repeat;}
+#contents .left8 .text {width:144px; height:53px; padding-left:57px;}
+#contents .right8 {float:left; margin-top:49px; width:776px; height:755px;}
+#contents .right8 .tit {width:218px; height:51px; padding-left:117px; background:url(../img/right7_tit.jpg) 31px 0 no-repeat;}
+#contents .right8 .box1 {width:732px; height:361px; margin:0 0 12px 41px; background:url(../img/right8_bg.jpg) no-repeat;}
+#contents .right8 .box1 ul {float:left; width:257px; height:289px; margin:65px 0 0 25px;}
+#contents .right8 .box1 ul li {height:53px; font-size:14px;}
+#contents .right8 .box1 .img {float:left; width:435px; height:273px; margin-top:66px;}
+#contents .right8 .box2 {width:732px; height:300px; margin-left:41px;}
+/*footer*/
+#footer {margin:0 auto; width:1003px; height:119px; text-align:center; color:#646464;}
+#footer .text1 {width:415px; height:24px; margin:0 auto;}
+#footer .text1 li {float:left; width:83px; height:24px; text-align:center; background:url(../img/icon3.jpg) right top no-repeat;}
+#footer .text2 {height:24px; margin:0 auto; width:306px;}
+#footer .text2 li {float:left; margin-right:12px; height:24px;}
+#footer .text3 {width:120px; height:16px; margin:0 auto;}
+#footer .text3 li {float:left; margin-right:12px;}
+
+
+.text_rd {color:#F00;}
+.text_rd2 {color:#a70001;}
+.fn_14 {font-size:14px;}
+.spacing {letter-spacing:4px;}
+.tit_main {padding:6px 0 0 25px;  width:252px; height:25px; background:url(../img/left_tit_bg.jpg) left top no-repeat; color:#FFFFFF;}
+.text_wd {font-weight:bold;}
+.text_black {color:#666666;}
+.color {color:#000;}
+.fl {float:left;}
+.fr {float:right;}
+.mr_right {margin-right:0!important;}
+.mr_img {margin-right:16px;}
+.mr3_bm {margin-bottom:40px!important;}
+.bg_none {background:none;}
+.bg_html5 {background:url(../img/left5_nav.jpg) 32px 0  no-repeat!important;}
+.bg_html2 {background:url(../img/left2_bg.gif) 32px 0 no-repeat!important;}
+.bg_html3 {background:url(../img/left3_bg.gif) 32px 0 no-repeat!important;}
+.bg_html4 {background:url(../img/left4_nav.jpg) 28px 0 no-repeat!important;}
+.bg_html6 {background:url(../img/left6_bg.gif) 30px 0 no-repeat!important;}
+.text_indent {text-indent:0!important;}
+.left6_dt {width:119px; height:105px; padding:68px 0 0 48px!important; background:none!important; }
+.li_mr {margin-right:24px!important;}
+.li_width {width:204px!important;}
+.li_width2 {width:400px!important;}
+.li_width3 {width:160px!important;}
+.input1 {width:104px; height:25px; background:url(../img/input1.jpg) right no-repeat; line-height:25px; text-align:center;}
+.input2 {width:200px; height:29px; background:url(../img/input2.jpg) no-repeat;}
+.input3 {width:366px; height:150px; background:url(../img/input3.jpg) no-repeat;}
+.input_wh {height:150px!important;}
+.input4 {width:71px; height:31px; line-height:31px; text-align:center; background:url(../img/input4.jpg) no-repeat;}
+.right3_a_lt {font-weight:bold; font-size:18px; color:#b20000; line-height:62px!important;}
+.right3_a_img {width:245px!important; padding-left:19px;}
+.a_color {color:#000;}
+
+
+

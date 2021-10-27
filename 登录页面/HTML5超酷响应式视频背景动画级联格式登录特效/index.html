@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Login</title>
+		<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link href="css/login.css" rel="stylesheet" rev="stylesheet" type="text/css" media="all" />
+		<style type="text/css">
+			a:hover,a:focus {
+				text-decoration: none;
+				outline: none;
+			}
+			#accordion {
+				padding-right: 24px;
+				padding-left: 24px;
+				z-index: 1;
+			}
+			#accordion .panel {
+				border: none;
+				box-shadow: none;
+			}
+			#accordion .panel-heading {
+				padding: 0;
+				border-radius: 0;
+				border: none;
+			}
+			#accordion .panel-title {
+				padding: 0;
+			}
+			#accordion .panel-title a {
+				display: block;
+				font-size: 16px;
+				font-weight: bold;
+				background: #e16b47;
+				color: #f7c59f;
+				padding: 15px 25px;
+				position: relative;
+				margin-left: -24px;
+			}
+			#accordion .panel-title a.collapsed {
+				background: #f7c59f;
+				color: #e16b47;
+				margin-left: 0;
+			}
+			#accordion .panel-title a:before {
+				content: "";
+				border-left: 24px solid #e16b47;
+				border-top: 24px solid transparent;
+				border-bottom: 24px solid transparent;
+				position: absolute;
+				top: 0;
+				right: -24px;
+			}
+			#accordion .panel-title a.collapsed:before {
+				border-left-color: #f7c59f;
+			}
+			#accordion .panel-title a:after {
+				content: "\f106";
+				font-family: 'FontAwesome';
+				position: absolute;
+				top: 30%;
+				right: 15px;
+				font-size: 18px;
+				color: #f7c59f;
+			}
+			#accordion .panel-title a.collapsed:after {
+				content: "\f107";
+				color: #e16b47;
+			}
+			#accordion .panel-collapse {
+				position: relative;
+			}
+			#accordion .panel-collapse.in:before {
+				content: "";
+				border-right: 24px solid #f7c59f;
+				border-bottom: 18px solid transparent;
+				position: absolute;
+				top: 0;
+				left: -24px;
+			}
+			#accordion .panel-body {
+				font-size: 14px;
+				color: #333;
+				background: #2f3238;
+				border-top: none;
+				z-index: 1;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			html,body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			#container {
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			#background_video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
+			}
+			#video_cover {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: url('img/video_cover.jpg') no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			#video_controls {
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+			#play img {
+				width: 100px;
+			}
+			#pause img {
+				width: 90px;
+			}
+			#pause {
+				display: none;
+			}
+			@media (min-width: 768px) {
+				#video_controls {
+					display: none;
+				}
+			}
+			body {
+				text-align: center;
+				font-family: 'proxima-nova', Helvetica;
+			}
+			#container {
+				height: 100%;
+			}
+			#overlay {
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.5);
+			}
+			#main_content {
+				z-index: 2;
+				position: relative;
+				display: inline-block;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			#main_content h1 {
+				text-transform: uppercase;
+				font-weight: 600;
+				font-family: 'proxima-nova-condensed', Helvetica;
+				color: #fff;
+				font-size: 35px;
+			}
+			#main_content .sub_head {
+				color: rgba(255, 255, 255, 0.5);
+				font-size: 18px;
+			}
+			#main_content .info {
+				color: rgba(255, 255, 255, 0.5);
+				font-size: 12px;
+				margin-top: 10px;
+			}
+			#links {
+				margin-top: 50px;
+			}
+			#links a {
+				border: 2px solid rgba(255, 255, 255, 0.20);
+				border-radius: 61px;
+				font-size: 12px;
+				color: #FFFFFF;
+				letter-spacing: 1px;
+				text-decoration: none;
+				text-transform: uppercase;
+				padding: 10px 25px;
+				display: inline-block;
+				margin-right: 15px;
+			}
+			#footer {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+			#footer a {
+				color: rgba(255, 255, 255, 0.5);
+				text-decoration: none;
+				margin: 10px;
+				font-size: 12px;
+			}
+			#footer a:first-child {
+				float: left;
+			}
+			#footer a:last-child {
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<video id="background_video" loop muted></video>
+			<div id="video_cover"></div>
+			<div id="overlay"></div>
+			<div id="video_controls">
+				<span id="play">
+	        		<img src="play.png">
+	   		   	</span>
+				<span id="pause">
+	        		<img src="pause.png">
+	      		</span>
+			</div>
+			<section id="main_content">
+				<div id="head">
+					<div class="htmleaf-container">
+						<header class="htmleaf-header">
+							<h1>考试管理系统</h1>
+						</header>
+						<div class="demo">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-offset-3 col-md-6">
+										<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+											<!-- 学生登录开始 -->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="headingOne">
+													<h4 class="panel-title">
+		                                				<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">考生登录</a>
+													</h4>
+												</div>
+												<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+													<div class="panel-body">
+														<div class="tab_box">
+															<div class="stu_error_box"></div>
+															<form action="" method="post" class="stu_login_error">
+																<div id="stuLogin">
+																	<section class="content">
+																		<span class="input input--kaede">
+																			<input class="input__field input__field--kaede" type="text" id="input-33" nullmsg="管理员姓名不能为空！" datatype="s6-18" errormsg="大小范围限制在6~18个字符之间！" sucmsg="验证通过！"  />
+																			<label class="input__label input__label--kaede" for="input-33">
+																				<span class="input__label-content input__label-content--kaede">管理员名称</span>
+																			</label>
+																		</span>
+																		<span class="input input--kaede">
+																			<input class="input__field input__field--kaede" type="text" id="input-34" name="admin_passwold" nullmsg="密码不能为空！" datatype="*6-16" errormsg="密码范围在6~16位之间！" sucmsg="密码验证通过！"  />
+																			<label class="input__label input__label--kaede" for="input-34">
+																				<span class="input__label-content input__label-content--kaede">密码</span>
+																			</label>
+																		</span>
+																		<div id="remember2" align="left">
+																			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="remember">
+																			<label style="color: white;">记住密码</label>
+																		</div><br />
+																		<div id="login2">
+																			<button type="submit">登录</button>
+																		</div>
+																	</section>
+																</div>
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- 管理员登录录开始 -->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="headingTwo">
+													<h4 class="panel-title">
+		                                				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">管理员登录</a>
+		                          		  			</h4>
+												</div>
+												<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+													<div class="panel-body">
+														<div class="panel-body">
+															<div class="stu_error_box"></div>
+															<form action="" method="post" class="stu_login_error">
+																<div id="username">
+																	<section class="content">
+																		<span class="input input--kaede">
+																			<input class="input__field input__field--kaede" type="text" name="admin_name" id="input-3" value="请输入管理员账号" nullmsg="管理员姓名不能为空！" datatype="s6-18" errormsg="大小范围限制在6~18个字符之间！" sucmsg="验证通过！"  />
+																			<label class="input__label input__label--kaede" for="input-3">
+																				<span class="input__label-content input__label-content--kaede">管理员名称</span>
+																			</label>
+																		</span>
+																		<span class="input input--kaede">
+																			<input class="input__field input__field--kaede" type="password" id="input-4" name="admin_passwold" nullmsg="密码不能为空！" datatype="*6-16" errormsg="密码范围在6~16位之间！" sucmsg="密码验证通过！"  />
+																			<label class="input__label input__label--kaede" for="input-4">
+																				<span class="input__label-content input__label-content--kaede">密码</span>
+																			</label>
+																		</span>
+																		<div id="remember2" align="left">
+																			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="remember">
+																			<label style="color: white;">记住密码</label>
+																		</div><br />
+																		<div id="login2">
+																			<button type="submit">登录</button>
+																		</div>
+																	</section>
+																</div>
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- 教员登录录 -->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="headingTree">
+													<h4 class="panel-title">
+		                                				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTree" aria-expanded="false" aria-controls="collapseTree">教员登录</a>
+		                          		  			</h4>
+												</div>
+												<div id="collapseTree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTree">
+													<div class="panel-body">
+														<div class="panel-body">
+															<div class="stu_error_box"></div>
+															<form action="" method="post" class="stu_login_error">
+																<div id="username">
+																	<section class="content">
+																		<span class="input input--kaede">
+																			<input class="input__field input__field--kaede" type="text" name="teacher_name" id="input-5" value="请输入教工号" nullmsg="教员账号不能为空！" datatype="s6-18" errormsg="大小范围限制在6~18个字符之间！" sucmsg="验证通过！" />
+																			<label class="input__label input__label--kaede" for="input-5">
+																				<span class="input__label-content input__label-content--kaede">教员账号</span>
+																			</label>
+																		</span>
+																		<span class="input input--kaede">
+																			<input class="input__field input__field--kaede" type="password" id="input-6" name="teacher_passwold" nullmsg="密码不能为空！" datatype="*6-16" errormsg="密码范围在6~16位之间！" sucmsg="密码验证通过！" />
+																			<label class="input__label input__label--kaede" for="input-6">
+																				<span class="input__label-content input__label-content--kaede">密码</span>
+																			</label>
+																		</span>
+																		<div id="remember3" align="left">
+																			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="remember">
+																			<label style="color: white;">记住密码</label>
+																		</div><br />
+																		<div id="login3">
+																			<button type="submit">登录</button>
+																		</div>
+																	</section>
+																</div>
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js " type="text/javascript "></script>
+	<script type="text/javascript" src="js/Validform_v5.3.2.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js "></script>
+	<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			/* 学生登录信息验证*/
+			$("#input-1").focusout(function() {
+				var student_Name = $(this).val();
+				if(student_Name == '') {
+					$(this).val('请输入学生账号');
+				}
+			});
+			$("#input-1").focus(function() {
+				var student_name = $(this).val();
+				if(student_name == '请输入学生账号') {
+					$(this).val('');
+				}
+			})
+			$("#input-2").focus(function() {
+				var stuPasswold = $(this).val();
+				if(stuPasswold == '请输入密码') {
+					$(this).val('');
+				}
+			});
+			$("#input-2").focusout(function() {
+				var stuPasswold = $(this).val();
+				if(stuPasswold == '') {
+					$(this).val('请输入密码');
+				}
+			});
+			/**管理员登录信息验证*/
+			$("#input-3").focus(function() {
+				var adminName = $(this).val();
+				if(adminName == '请输入管理员账号') {
+					$(this).val('');
+				}
+			});
+			$("#input-3").focusout(function() {
+				var adminName = $(this).val();
+				if(adminName == '') {
+					$(this).val('请输入管理员账号');
+				}
+			});
+			$("#input-4").focus(function() {
+				var adminPasswold = $(this).val();
+				if(adminPasswold == '请输入密码') {
+					$(this).val('');
+				}
+			});
+			$("#input-4").focusout(function() {
+				var adminPasswold = $(this).val();
+				if(adminPasswold == '') {
+					$(this).val('请输入密码');
+				}
+			});
+			/**教员登录信息验证*/
+			$("#input-5").focus(function() {
+				var teacherName = $(this).val();
+				if(teacherName == '请输入教工号') {
+					$(this).val('');
+				}
+			});
+			$("#input-5").focusout(function() {
+				var teacherName = $(this).val();
+				if(teacherName == '') {
+					$(this).val('请输入教工号');
+				}
+			});
+			$("#input-6").focus(function() {
+				var teacherPasswold = $(this).val();
+				if(teacherPasswold == '请输入密码') {
+					$(this).val('');
+				}
+			});
+			$("#input-6").focusout(function() {
+				var teacherPasswold = $(this).val();
+				if(teacherPasswold == '') {
+					$(this).val('请输入密码');
+				}
+			});
+		});
+	</script>
+	<script src="bideo.js"></script>
+	<script src="main.js"></script>
+	<script>
+		(function() {
+			if(!String.prototype.trim) {
+				(function() {
+					var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+					String.prototype.trim = function() {
+						return this.replace(rtrim, '');
+					};
+				})();
+			}
+			[].slice.call(document.querySelectorAll('input.input__field')).forEach(function(inputEl) {
+				if(inputEl.value.trim() !== '') {
+					classie.add(inputEl.parentNode, 'input--filled');
+				}
+				inputEl.addEventListener('focus', onInputFocus);
+				inputEl.addEventListener('blur', onInputBlur);
+			});
+
+			function onInputFocus(ev) {
+				classie.add(ev.target.parentNode, 'input--filled');
+			}
+
+			function onInputBlur(ev) {
+				if(ev.target.value.trim() === '') {
+					classie.remove(ev.target.parentNode, 'input--filled');
+				}
+			}
+		})();
+	</script>
+</html>
