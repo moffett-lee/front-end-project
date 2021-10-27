@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>昆明市创业园区精准服务平台</title>
+    <link href="css/reset.min.css" rel="stylesheet">
+    <link href="css/user.min.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+    <link href="css/Progress.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<script src="js/lib/jquery/jquery-1.8.3.min.js"></script>
+<script src="js/jquerysession.js"></script>
+<script>
+        $(function () {
+            var userName = $.session.get("userName", userName);
+            var password = $.session.get("password", password);
+            if(userName=="admin" && password=="123456"){
+                
+            }else{
+                window.location.href="login.html";
+            }
+        })
+</script>
+    <div class="map">
+        <header class="title">
+        </header>
+        <main class="main">
+            <section class="header">
+                <ul>
+                    <li>
+                        <h3>固定成本投入</h3>
+                    </li>
+                    <li>
+                        <h3>可变成本投入</h3>
+                    </li>
+                    <li>
+                        <p>创业人才数
+                            <span>2433人</span>
+                        </p>
+                        <div class="h-progress" gradient="true" gradientStart="#479bc1" gradientEnd="#45149a" w="100" style="height:0.93vh;margin-top:1.1vh;"
+                            c="#1e96ef">
+                            <div class="h-progress-bar" style="height:0.93vh;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>企业数
+                            <span>804个</span>
+                        </p>
+                        <div class="h-progress" gradient="true" gradientStart="#479bc1" gradientEnd="#45149a" w="100" style="height:0.93vh;margin-top:1.1vh;"
+                            c="#1e96ef">
+                            <div class="h-progress-bar" style="height:0.93vh;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>平均在园时间
+                            <span>859天</span>
+                        </p>
+                        <div class="h-progress" gradient="true" gradientStart="#479bc1" gradientEnd="#45149a" w="82" style="height:0.93vh;margin-top:1.1vh;"
+                            c="#1e96ef">
+                            <div class="h-progress-bar" style="height:0.93vh;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>运营成本
+                            <span>256万</span>
+                        </p>
+                        <div class="h-progress" gradient="true" gradientStart="#479bc1" gradientEnd="#45149a" w="72" style="height:0.93vh;margin-top:1.1vh;"
+                            c="#1e96ef">
+                            <div class="h-progress-bar" style="height:0.93vh;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>园区固定成本投入
+                            <span>771.56万</span>
+                        </p>
+                        <div class="h-progress" gradient="true" gradientStart="#479bc1" gradientEnd="#45149a" w="62" style="height:0.93vh;margin-top:1.1vh;"
+                            c="#1e96ef">
+                            <div class="h-progress-bar" style="height:0.93vh;"></div>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                        <p>税收减免额
+                            <span>2329.64万</span>
+                        </p>
+                        <div class="h-progress" gradient="true" gradientStart="#479bc1" gradientEnd="#45149a" w="62" style="height:0.93vh;margin-top:1.1vh;"
+                            c="#1e96ef">
+                            <div class="h-progress-bar" style="height:0.93vh;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>经济收益</h3>
+                    </li>
+                    <li></li>
+                </ul>
+                <div class="header-footer">
+                    <div>
+                        <p>平均孵化成长率
+                            <span>55</span>%</p>
+                        <h5>生产总值增加55亿</h5>
+                    </div>
+                    <div>
+                        <p>税收贡献率
+                            <span>9</span>%</p>
+                        <h5>创业企业上缴税收12亿</h5>
+                    </div>
+                </div>
+            </section>
+            <section class="center">
+                <div class="center-left">
+                    <p>空间发展率</p>
+                    <div id="zyly"></div>
+                    <div class="center-footer">
+                        <h5>政府扶持
+                            <span>62%</span>
+                        </h5>
+                        <div class="h-progress" w="62" style="height:0.93vh;margin-top:1.1vh;" c="#1e96ef">
+                            <div class="h-progress-bar" style="height:0.93vh;"></div>
+                        </div>
+                    </div>
+                    <div class="center-footer">
+                        <h5>社会产出
+                            <span>62%</span>
+                        </h5>
+                        <div class="h-progress" w="48" style="height:0.93vh;margin-top:1.1vh;" c="#fcc01b">
+                            <div class="h-progress-bar" style="height:0.93vh;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-right">
+                    <ul>
+                        <li>
+                            <h4>园区服务人数</h4>
+                            <p>
+                                <span>48532</span>&nbsp;人
+                            </p>
+                        </li>
+                        <li>
+                            <h4>孵化企业数</h4>
+                            <p>
+                                <span>3422</span>&nbsp;人
+                            </p>
+                        </li>
+                        <li>
+                            <h4>带动就业人数</h4>
+                            <p>
+                                <span>33482</span>&nbsp;人
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 左边底部 -->
+            <section class="left-footer">
+                <div id="xyzs"></div>
+            </section>
+            <section class="right-header">
+                <div class="right-header-left">
+                    <h3>园区企业在园区时长排名</h3>
+                    <div class="title">
+                        企业名称
+                        <span>时长(天)</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <label>1</label>
+                            <span>千峰数据有限公司</span>
+                            <em>2580</em>
+                        </li>
+                        <li>
+                            <label>2</label>
+                            <span>云南双创工业园</span>
+                            <em>1452</em>
+                        </li>
+                        <li>
+                            <label>3</label>
+                            <span>数字冰雹</span>
+                            <em>3310</em>
+                        </li>
+                        <li>
+                            <label>4</label>
+                            <span>云南区块链产业孵化器</span>
+                            <em>3876</em>
+                        </li>
+                        <li>
+                            <label>5</label>
+                            <span>云南光机电科技有限公司</span>
+                            <em>4589</em>
+                        </li>
+                        <li>
+                            <label>6</label>
+                            <span>云南省高科技发展有限 公司</span>
+                            <em>4457</em>
+                        </li>
+                        <li>
+                            <label>7</label>
+                            <span>云南七彩软件公司</span>
+                            <em>5630</em>
+                        </li>
+                        <li>
+                            <label>8</label>
+                            <span>川信高科技平台</span>
+                            <em>1515</em>
+                        </li>
+                        <li>
+                            <label>9</label>
+                            <span>大数据云计算研发中心</span>
+                            <em>2223</em>
+                        </li>
+                        <li>
+                            <label>10</label>
+                            <span>云科起点众创空间</span>
+                            <em>4562</em>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-header-right">
+                    <p>企业平均孵化
+                        <br>成长率</p>
+                    <span>
+                        <em>64</em> %</span>
+                    <div id="fhczl"></div>
+                </div>
+            </section>
+
+            <!-- 右边底部 -->
+            <section class="right-footer">
+                <div id="fwzb"></div>
+            </section>
+            <!-- 中奖底部 -->
+            <section class="page-footer">
+                <ul>
+                    <li>
+                        <p>创业人员数</p>
+                        <div>
+                            <span>42032</span>&nbsp;人</div>
+                    </li>
+                    <li>
+                        <p>园区总数</p>
+                        <div>
+                            <span>3438</span>&nbsp;个</div>
+                    </li>
+                    <li>
+                        <p>总盈利</p>
+                        <div>
+                            <span>23018</span>&nbsp;万元</div>
+                    </li>
+                    <li>
+                        <p>创业成本</p>
+                        <div>
+                            <span>3471</span>&nbsp;万元</div>
+                    </li>
+                </ul>
+            </section>
+            <!-- 地图 -->
+            <div id="map"></div>
+        </main>
+        <div style="position:absolute;right:3.2vw;bottom:1vh;color:#56baca">云南青年学园科技有限公司</div>
+    </div>
+
+<!-- echarts -->
+<script src="js/lib/echarts/echarts.js"></script>
+<script src="js/lib/echarts/util/shape/guiyang.js"></script>
+<!-- 字符云，右边的阿里巴巴 -->
+<script src="js/lib/echarts/echarts-wordcloud.min.js"></script>
+<!--数据滚动上升 -->
+<script src="js/lib/animatenumber/naimateNumber.js"></script>
+
+<script src="js/lib/echarts/echarts-gl.min.js"></script>
+<script src="js/lib/animaten3d/html5_3d_animation.js?23"></script>
+<script src="js/hmap.js"></script>
+<script src="js/tubiao-map.js"></script>
+    <script>
+        $(function () {
+            //进度条
+            $(".h-progress").each(function (i, item) {
+                var a = parseInt($(item).attr("w"));
+                var c = $(item).attr("c");
+                var gradient = $(item).attr("gradient");
+                if (gradient) {
+                    var gradientStart = $(item).attr("gradientStart");
+                    var gradientEnd = $(item).attr("gradientEnd");
+                    $(item).find(".h-progress-bar").css({
+                        "background": "-webkit-linear-gradient(left, " + gradientStart + ",  " + gradientEnd + ")",
+                        "background": "linear-gradient(to right, " + gradientStart + ",  " + gradientEnd + ")",
+                        "border-radius": "0"
+                    });
+                } else {
+                    $(item).find(".h-progress-bar").css({ "background-color": c });
+                }
+                $(item).find("label").text(a + "%");
+                $(item).find(".h-progress-bar").animate({
+                    "width": a + "%"
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

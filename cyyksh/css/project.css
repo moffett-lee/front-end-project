@@ -1,0 +1,522 @@
+@charset "utf-8";
+/*公共*/
+
+.colorL {
+    color: #2deff6;
+}
+
+.textN {
+    font-size: 0.52rem;
+}
+
+body {
+    background: url(../img/index/bg.png) no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.index>.title {
+    text-align: center;
+    font-size: 1.75rem;
+    color: #afdcfe;
+    text-shadow: 0px 0px 4px #AFDCFE;
+    height: 8vh;
+    line-height: 10vh;
+    background: url(../img/index/top.png) no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.index>main {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.index>main .main-one {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-direction: normal;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 42vh;
+}
+
+.index>main .main-one .one-left {
+    height: 42vh;
+    width: 49%;
+    background: url(../img/index/left－1bg.png) no-repeat;
+    text-align: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.index>main .main-one .one-left .one-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 15.7vh;
+}
+
+.index>main .main-one .one-left p b {
+    font-size: 2.5rem;
+    color: #2fedff;
+}
+
+.index>main .main-one .one-left p strong {
+    font-size: 1.5rem;
+}
+
+.index>main .main-one .one-left #one {
+    width: 100%;
+    height: 42vh;
+}
+
+.index>main .main-one .one-left .left-title {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: left;
+    text-indent: 6rem;
+}
+
+.index>main .main-one .one-left .left-title li {
+    margin-top: 8vh;
+}
+
+.index>main .main-one .one-left .left-title p {
+    color: white;
+}
+
+.index>main .main-one .one-right {
+    height: 42vh;
+    width: 49%;
+    background: url(../img/index/right－1bg.png) no-repeat;
+    text-align: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.index>main .main-one .one-right #ljps {
+    height: 42vh;
+    width: 100%;
+}
+
+.index>main .main-one .one-right p {
+    position: absolute;
+    right: 10%;
+    top: 2rem;
+}
+
+.index>main .main-one .one-right p b {
+    color: #2deff6;
+    font-size: 1.5rem;
+}
+
+/*底部三个*/
+
+.index>main .main-two {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-direction: normal;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 42vh;
+}
+
+.index>main .main-two .two-left {
+    width: 30%;
+    height: 42vh;
+    background: url(../img/index/left－2bg.png) no-repeat;
+    text-align: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.index>main .main-two .two-left .fhcd {
+    width: 15.4vw;
+    height: 15.4vw;
+    /* background-color: red; */
+    background: url(../img/index/yuan.png) no-repeat;
+    /* background-size: 100% 100%; */
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.7vw;
+    top: 50%;
+    margin-top: -7.7vw;
+    padding-top: 4.85rem;
+}
+
+.index>main .main-two .two-left .fhcd p b {
+    font-size: 2.5rem;
+}
+
+.index>main .main-two .two-center {
+    width: 40%;
+    top:2vh;
+    height: 40vh;
+    background: url(../img/index/mid－bg.png) no-repeat;
+    text-align: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.index>main .main-two .two-center #zsr {
+    width: 100%;
+    height: 42vh;
+}
+
+.index>main .main-two .two-center p {
+    position: absolute;
+    right: 10%;
+    top: 1rem;
+}
+
+.index>main .main-two .two-center p b {
+    color: #2deff6;
+    font-size: 1.5rem;
+}
+
+.index>main .main-two .two-right {
+    width: 30%;
+    height: 42vh;
+    background: url(../img/index/right－2bg.png) no-repeat;
+    text-align: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.index>main .main-two .two-right #fxtz {
+    width: 100%;
+    height: 42vh;
+}
+
+.index>main .main-two .two-right p {
+    position: absolute;
+    right: 10%;
+    top: 2rem;
+}
+
+.index>main .main-two .two-right p b {
+    color: #2deff6;
+    font-size: 1.5rem;
+}
+
+/*含地图*/
+
+.map>.title {
+    text-align: center;
+    font-size: 1.75rem;
+    color: #afdcfe;
+    text-shadow: 0px 0px 4px #AFDCFE;
+    background: url(../img/index/top.png) no-repeat;
+    background-size: 100% 100%;
+    height: 8vh;
+    line-height: 8vh;
+}
+
+.map .main {
+    width: 98%;
+    margin:-3vh auto 0;
+    position: relative;
+}
+
+.map .main .header {
+    position: absolute;
+    width: 31.25vw;
+    height: 37vh;
+    background: url(../img/index/经济性指标.png) no-repeat;
+    background-size: 100% 100%;
+    padding:3vh 0vh 0 7.5vh;
+}
+
+.map .main .header ul::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.map .main .header ul {
+    margin: 2.70vh auto 0;
+}
+
+.map .main .header ul li {
+    padding-right:3.07vw;
+    width:50%;
+    float: left;
+    margin-top: 0.8vh;
+    font-size: 0.8rem;
+}
+.map .main .header ul li p{
+    position: relative;
+}
+.map .main .header ul li p span{
+    float: right;
+}
+.map .main .header .header-footer {
+    margin:0 auto;
+}
+.map .main .header .header-footer>div{
+    width: 50%;
+    float: left;
+}
+.map .main .header .header-footer>div p{
+   color: #2ceeff;
+}
+.map .main .header .header-footer>div p span{
+    font-size: 2rem;
+ }
+
+
+.map .main .center {
+    position: absolute;
+    top: 37vh;
+    width: 31.25vw;
+    height: 29.1vh;
+    background: url(../img/index/社会性指标.png) no-repeat;
+    text-align: center;
+    background-size: 100% 100%;
+    padding:4vh 0 0 3vh;
+}
+
+.map .main .center>div {
+    float: left;
+    width: 50%;
+    position: relative;
+    margin-top: 1vh;
+}
+
+.map .main .center .center-left .center-footer {
+    float: left;
+    width: 5.2vw;
+    position: relative;
+    margin-left: 1.7vw;
+}
+
+.map .main .center .center-left .center-footer h5 {
+    text-align: left;
+    font-size: 0.7rem;
+    height: 1rem;
+    line-height: 1rem;
+}
+
+.map .main .center .center-left .center-footer span {
+    float: right;
+    font-size: 0.9rem;
+    color: #2ae4f5;
+}
+
+.map .main .center .center-left #zyly {
+    height: 18.2vh;
+    width: 100%;
+}
+
+.map .main .center .center-left>p {
+    position: absolute;
+    left: 6.2vw;
+    top: 7.9vh;
+    font-size: 0.6rem;
+}
+
+.map .main .center .center-right ul {
+    width: 10vw;
+    margin: 0 auto;
+}
+
+.map .main .center .center-right ul li {
+    margin-top: 1vh;
+    text-align: left;
+}
+
+.map .main .center .center-right ul li h4 {
+    font-size: 1rem;
+}
+
+.map .main .center .center-right ul li p {
+    font-size: 1rem;
+    margin-top: 1vh;
+    line-height: 2.3vh;
+    background: -webkit-linear-gradient(left,#289cf4,#45149a);
+    background: linear-gradient(to right,#289cf4,#45149a);
+    text-align: right;
+    padding: 0.1vh 0.5vw;
+    color: #28c3df;
+}
+
+.map .main .center .center-right ul li p span {
+    font-size: 1.25rem;
+    color: #28c3df;
+}
+
+/**/
+
+.map .main .right-header {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 33.28vw;
+    height: 55.3vh;
+    background: url(../img/index/技术性指标.png) no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding: 2.87vh 1.35vw;
+}
+
+.map .main .right-header .right-header-left {
+    width: 15.4vw;
+}
+
+.map .main .right-header .right-header-left>h3 {
+    font-size: 1rem;
+}
+
+.map .main .right-header .right-header-left>.title {
+    font-size: 1rem;
+    height: 4.44vh;
+    line-height: 4.44vh;
+    background-color: #2062a0;
+    opacity: 0.8;
+    padding: 0 0.78vw;
+    margin: 1.85vh 0;
+}
+
+.map .main .right-header .right-header-left>.title span {
+    float: right;
+}
+
+.map .main .right-header .right-header-left ul li {
+    font-size: 0.8rem;
+    position: relative;
+    margin-bottom: 1.7vh;
+}
+
+.map .main .right-header .right-header-left ul li label {
+    height: 1rem;
+    width: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    display: inline-block;
+    border-radius: 11%;
+    background-color: #06355b;
+    opacity: 0.8;
+}
+
+.map .main .right-header .right-header-left ul li em {
+    position: absolute;
+    right: 0.1vw;
+    color: #28d0e1;
+}
+
+.map .main .right-header .right-header-right {
+    position: absolute;
+    right: 2vw;
+    width: 14vw;
+    height: 55.3vh;
+    top: 11.4vh;
+    text-align: center;
+}
+
+.map .main .right-header .right-header-right #fhczl {
+    width: 19.35vh;
+    height: 19.35vh;
+    margin: 3.2vh auto;
+    position: relative;
+}
+
+.map .main .right-header .right-header-right>span {
+    position: absolute;
+    top: 17.2vh;
+    color: #56baca;
+    left: 5.3vw;
+    font-size: 1rem;
+}
+
+.map .main .right-header .right-header-right>span>em {
+    font-size: 1.6rem;
+}
+
+/* 右边底部 */
+
+.map .main .right-footer {
+    position: absolute;
+    right: 0;
+    top: 52.3vh;
+    width: 29.1vw;
+    height: 42.4vh;
+    background: url(../img/index/创业园服务指标.png) no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+
+.map .main .right-footer #fwzb {
+    width: 29.1vw;
+    height: 39.4vh;
+}
+
+/*左侧底部*/
+
+.map .main .left-footer {
+    position: absolute;
+    left: 0;
+    top: 65.3vh;
+    width: 29.1vw;
+    height: 28.89vh;
+    background: url(../img/index/创业企业信用指数.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.map .main .left-footer #xyzs {
+    width: 25.1vw;
+    height: 22.89vh;
+    margin: 6.5vh 0 0 2.5vh;
+}
+
+/* 中间底部 */
+
+.map .main>.page-footer {
+    position: absolute;
+    left: 30.7vw;
+    top: 74.3vh;
+    width: 35.5vw;
+    height: 20.1vh;
+    background: url(../img/index/企业发展潜力指标.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.map .main>.page-footer ul {
+    margin:7.5vh auto 0 1vh;
+}
+
+.map .main>.page-footer ul li {
+    width: 7.7vw;
+    height: 11.3vh;
+    background: #0a1628;
+    opacity: 0.8;
+    float: left;
+    margin-left: 1.0vw;
+    text-align: center;
+    line-height: 5.6vh;
+}
+.map .main>.page-footer ul li div{
+    color: #2ceeff;
+}
+.map .main>.page-footer ul li div span{
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+/*地图*/
+.map .main #map{
+   width:44.15vw;
+   height:87.8vh;
+   margin:0 auto 0;
+   position: relative;
+   top:-5vh;
+}

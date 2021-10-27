@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>昆明市创业园区精准服务平台</title>
+    <link href="css/reset.min.css" rel="stylesheet">
+    <link href="css/user.min.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+    <link href="css/Progress.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+<script src="js/lib/jquery/jquery-1.8.3.min.js"></script>
+<script src="js/jquerysession.js"></script>
+<script>
+        $(function () {
+            var userName = $.session.get("user", userName);
+            var password = $.session.get("pass", password);
+            if(userName=="admin" && password=="123456"){
+                
+            }else{
+                window.location.href="login2.html";
+            }
+        })
+</script>
+    <div class="index">
+        <header class="title">
+
+        </header>
+        <main>
+            <section class="main-one">
+                <div class="one-left">
+                    <div style="position: relative;width:50%;">
+                        <div id="one"></div>
+                        <div class="one-title">
+                            <p>
+                                <b>14892</b>个 </p>
+                            <p>累计企业总数</p>
+                        </div>
+                    </div>
+                    <ul class="left-title">
+                        <li>
+                            <p>企业个数&nbsp;
+                                <strong class="colorL">352</strong>
+                                <span style="color:#3fa0a9;">&nbsp;家</span>
+                            </p>
+                            <div class="h-progress" w="25" c="#fcc01b" style="width:12vw;">
+                                <label></label>
+                                <div class="h-progress-bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>创业人才数&nbsp;
+                                <strong class="colorL">8765</strong>
+                                <span style="color:#3fa0a9;">&nbsp;家</span>
+                            </p>
+                            <div class="h-progress" w="82" c="#1e96ef" style="width:12vw;">
+                                <label></label>
+                                <div class="h-progress-bar"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="one-right">
+                    <p>累计评审项目&nbsp;
+                        <b>20582</b>
+                        <span style="color:#3fa0a9;">&nbsp;个</span>
+                    </p>
+                    <div id="ljps"></div>
+                </div>
+            </section>
+            <section class="main-two">
+                <section class="two-left">
+                    <img src="./img/index/line.png" style="width:81%;height:auto;position:absolute;top:0;z-index:-100;left:6vh;" alt="">
+                    <img src="./img/index/quan.png" class="J_quan" style="position:absolute;top:2vh;z-index:-100;left: 50%;margin-left: -7.9vw;top: 50%;margin-top: -7.9vw;"
+                        alt="">
+                    <div class="fhcd">
+                        <p class="colorL">
+                            <b>661572</b>&nbsp;平米</p>
+                        <p>孵化场地</p>
+                    </div>
+                </section>
+                <section class="two-center">
+                    <p>2017年总收入&nbsp;
+                        <b>243151.74</b>
+                        <span style="color:#3fa0a9;">&nbsp;万</span>
+                    </p>
+                    <div id="zsr"></div>
+                </section>
+                <section class="two-right">
+                    <p>2017年全年引入风险投资额&nbsp;
+                        <b>3.5</b>
+                        <span style="color:#3fa0a9;">&nbsp;亿</span>
+                    </p>
+                    <div id="fxtz"></div>
+                </section>
+            </section>
+        </main>
+        <div style="position:absolute;right:3.2vw;bottom:1vh;color:#56baca">云南青年学园科技有限公司</div>
+    </div>
+    <!-- echarts -->
+    <script src="js/lib/echarts/echarts.js"></script>
+    <script src="js/lib/echarts/util/shape/guiyang.js"></script>
+    <!-- 字符云，右边的阿里巴巴 -->
+    <script src="js/lib/echarts/echarts-wordcloud.min.js"></script>
+    <!--数据滚动上升 -->
+    <script src="js/lib/animatenumber/naimateNumber.js"></script>
+
+    <script src="js/lib/echarts/echarts-gl.min.js"></script>
+    <script src="js/lib/animaten3d/html5_3d_animation.js?23"></script>
+    <script src="js/tubiao.js"></script>
+    <script>
+        //地图
+        //var gzMap = echarts.init(document.getElementById('map'));
+        $(function () {
+            //进度条
+            $(".h-progress").each(function (i, item) {
+                var a = parseInt($(item).attr("w"));
+                var c = $(item).attr("c");
+                $(item).find(".h-progress-bar").css({ "background-color": c });
+                $(item).find("label").text(a + "%");
+                $(item).find(".h-progress-bar").animate({
+                    "width": a + "%"
+                }, 1000);
+            });
+            //圈旋转
+            quan(0);
+        });
+        function quan(n) {
+            setTimeout(function () {
+                if(n>360){
+                    n=0;
+                }
+                $(".J_quan").css({ "transform": "rotate(" + n + "deg)", "-webkit-transform": "rotate(" + n + "deg)" });
+                n++;
+                quan(n);
+            }, 10);
+        }
+
+        //地图
+        function gyMap() {
+            // myChart.showLoading();
+            var uploadedDataURL = "js/lib/echarts/util/mapData/rawData/geoJson/bei_jing_geo.json";
+            $.get(uploadedDataURL, function (geoJson) {
+
+                // myChart.hideLoading();
+
+                echarts.registerMap(name, geoJson);
+
+                gzMap.setOption({
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    geo: {
+                        name: '贵州',
+                        type: 'map',
+                        map: 'world',
+                        mapType: 'none',
+                        zlevel: 2,
+                        z: 2,
+                        label: {
+                            normal: {
+                                show: true,
+                                color: '#f4f83c'
+                            },
+                            emphasis: {
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+
+                        center: [106.6992, 26.7682],
+                        layoutSize: '135%',
+                        layoutCenter: ['50%', '48%'], //地图位置
+                        aspectScale: 1.2,
+                        itemStyle: {
+                            normal: {
+                                shadowOffsetY: 10,
+                                shadowBlur: 15,
+                                opacity: 0.9,
+                                borderWidth: 1,
+                                areaColor: '#0f1a2e', //内部颜色
+                                shadowColor: 'rgba(60, 150,225, 0.5)',
+                                borderColor: "#4c74a6"
+                            },
+                            emphasis: {
+                                areaColor: "#72c5eb",
+                                label: {
+                                    show: true,
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: '用户分布',
+                        type: 'effectScatter',
+                        coordinateSystem: 'geo',
+                        legendHoverLink: 'false',
+                        rippleEffect: {
+                            period: 4,
+                            brushType: 'stroke',
+                            scale: 3
+                        },
+                        symbolSize: function (val) {
+                            return val[2] / 30;
+                        },
+                        showEffectOn: 'render',
+                        roam: true,
+                        hoverAnimation: true,
+                        itemStyle: {
+                            normal: {
+                                color: '#f4e925',
+                                shadowBlur: 5,
+                                shadowColor: '#333'
+                            }
+                        },
+                        data: convertData([
+                            { name: '贵阳市', value: 501.68 },
+                            { name: '遵义市', value: 808 },
+                            { name: '安顺市', value: 608 },
+                            { name: '六盘水市', value: 308 },
+                            { name: '黔东南苗族侗族自治州', value: 408 },
+                            { name: '毕节地区', value: 208 }
+                        ].sort(function (a, b) {
+                            return b.value - a.value;
+                        }).slice(0, 6)),
+
+                    }]
+                });
+            });
+        }
+
+        var geoCoordMap = {
+            "贵阳市": [106.6992, 26.7682],
+            "遵义市": [106.957, 27.709444],
+            "安顺市": [105.947518, 26.259511],
+            "六盘水市": [104.83468, 26.599608],
+            "黔东南苗族侗族自治州": [107.99347, 26.584275],
+            "毕节地区": [105.303188, 27.304854]
+        };
+        var convertData = function (data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                var geoCoord = geoCoordMap[data[i].name];
+                if (geoCoord) {
+                    res.push({
+                        name: data[i].name,
+                        value: geoCoord.concat(data[i].value)
+                    });
+                }
+            }
+            return res;
+        };
+    </script>
+</body>
+
+</html>
